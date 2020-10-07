@@ -45,31 +45,42 @@
 			<div class="codoswp-container">
 				<!-- Brand and toggle get grouped for better mobile display -->
 				<div class="navbar-header">
-					<div class="site-branding">
+					
 						<?php
 							if( function_exists( 'the_custom_logo' ) ) {
 								if(has_custom_logo()) {
-									the_custom_logo();
+								?>
+								<div class="site-branding custom-logo">
+									<?php
+										the_custom_logo();
+									?>
+								</div>
+								<?php
 								} else {
-									if ( is_front_page() && is_home() ) :
-										?>
-										<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+								?>
+									<div class="site-branding">
 										<?php
-									else :
+											if ( is_front_page() && is_home() ) :
+												?>
+												<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+												<?php
+											else :
+												?>
+												<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+												<?php
+											endif;
+											$codoswp_description = get_bloginfo( 'description', 'display' );
+											if ( $codoswp_description || is_customize_preview() ) :
+												?>
+												<p class="site-description d-none d-lg-block"><?php echo $codoswp_description;?></p>
+											<?php 
+											endif;
 										?>
-										<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-										<?php
-									endif;
-									$codoswp_description = get_bloginfo( 'description', 'display' );
-									if ( $codoswp_description || is_customize_preview() ) :
-										?>
-										<p class="site-description d-none d-lg-block"><?php echo $codoswp_description;?></p>
-									<?php 
-									endif;
+									</div>
+									<?php
 								}
 							} 
 						?>
-					</div>
 					<button class="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
 						menu
 					</button>

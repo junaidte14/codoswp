@@ -710,6 +710,11 @@ textarea {
 	margin: 0;
 }
 
+.site-header .site-branding.custom-logo {
+	max-width: 250px;
+	float: left;
+}
+
 .site-branding .site-title {
 	float: left;
 	margin-right: 10px;
@@ -724,11 +729,6 @@ textarea {
 
 /* Navigation
 --------------------------------------------- */
-.site-header .site-branding {
-	max-width: 250px;
-	float: left;
-}
-
 .navbar {
 	padding: .5rem 0;
 }
