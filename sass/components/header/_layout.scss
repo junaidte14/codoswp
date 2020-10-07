@@ -1,0 +1,22 @@
+.site-header{
+    padding: 0;
+}
+
+.site-branding{
+    .site-title, .site-description {
+        margin: 0;
+    }
+}
+
+.site-branding{
+    .site-title {
+        float: left;
+        margin-right: 10px;
+        display: block;
+    }
+    .site-description {
+        float: left;
+        display: block;
+        line-height: 2.4em;
+    }
+}

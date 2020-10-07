@@ -1,0 +1,89 @@
+.sticky {
+	display: block;
+}
+
+.site{
+	overflow: hidden;
+}
+
+.post,
+.page {
+	margin: 0;
+}
+
+#primary{
+	margin: 0;
+	min-height: 400px;
+}
+
+#secondary{
+	margin: 10px 0;
+}
+
+article{
+    padding: 0;
+}
+
+article header.entry-header{
+    padding: 20px 5px;
+} 
+
+article header .entry-title{
+    margin: 0;
+} 
+
+.updated:not(.published) {
+	display: none;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+.alignwide,
+.alignfull {
+	margin: 0 calc(50% - 50vw) 32px calc(50% - 50vw);
+	max-width: none;
+	width: 100vw;
+}
+
+.codo-hide-title article header{
+	display: none;
+}
+
+// home page styles
+.codo-full-page{
+	overflow: hidden;
+	display: block;
+	#primary{
+		margin: 0;
+	}
+	.wp-block-cover .codoswp-container{
+		width: 74%;
+	}
+	.wp-block-cover .wp-block-column {
+		align-self: center;
+	}
+
+	.wp-block-cover .wp-block-button__link{
+		font-size: 12px;
+		padding: 8px 16px;
+	}
+} 
+
+@media (max-width: 767px){
+	.codo-full-page .wp-block-cover .codoswp-container {
+		width: 94%;
+	}
+
+	.codo-full-page .wp-block-cover .wp-block-cover__inner-container {
+		width: 100%;
+	}
+}

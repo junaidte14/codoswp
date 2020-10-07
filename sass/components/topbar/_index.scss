@@ -1,0 +1,17 @@
+.top-bar{
+    padding: 5px 0;
+    li a{
+        font-weight: 400;
+        font-size: 14px;
+    }
+    .nav-link {
+        padding: 2px 5px;
+        border-radius: 2px;
+    }
+}
+
+@media (max-width: 767px){
+    .top-bar .navbar-nav{
+        flex-direction: row;
+    }
+}

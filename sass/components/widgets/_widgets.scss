@@ -1,0 +1,34 @@
+.widget {
+	margin: 0 0 1.5em;
+
+	// Make sure select elements fit in widgets.
+	select {
+		max-width: 100%;
+	}
+}
+
+.widget-area .widget ul {
+    padding: 0;
+    margin-bottom: 0;
+    list-style: none;
+    margin-top: 0;
+}
+
+.widget-area .widget ul li {
+    padding: .5rem 1.25rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.widget-area .widget ul li a {
+    text-decoration: none;
+}
+
+.widget-title {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding: .5rem 1rem 0 1rem;
+}
+
+.widget_search .search-form{
+	padding: 10px;
+}
