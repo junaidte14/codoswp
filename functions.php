@@ -222,54 +222,6 @@ add_theme_support( 'editor-color-palette', array(
 ) );
 
 /**
- * Shortcode to populate upcoming events
- */
-
-// Function to get 3 upcoming events from events calendar plugin
-function codoswp_upcoming_events() {
-	$events = EM_Events::get(array('scope'=>'future','limit'=>3));
-	ob_start();
-	?>
-	<div class="codoswp-upcoming-events-list codoswp-container">
-		<div class="row">
-			<?php
-			foreach($events as $event){
-				//var_dump($event);
-				$eventOriginalDate = $event->event_start_date;
-				$eventDate = date("j-M-Y", strtotime($eventOriginalDate));
-				$eventDateExplode = explode('-', $eventDate);
-				$eventD = $eventDateExplode[0];
-				$eventMY = ' '.$eventDateExplode[1].' '.$eventDateExplode[2];
-				?>
-				<div class="col-sm-12 col-md-4">
-					<div class="card">
-						<div class="icon-card has-codoswp-color-1-background-color">
-							<span class="event-d"><?php echo $eventD;?></span><span class="event-my"><?php echo $eventMY;?></span>
-						</div>
-						<h2 class="has-codoswp-color-1-color has-text-color" style="font-size:18px">
-							<?php echo $event->event_name;?>
-						</h2>
-						<p class="has-text-color" style="font-size:14px;color:#545454">
-							<?php echo $event->post_excerpt;?>
-						</p>
-						<div class="wp-block-button">
-							<a href="<?php echo $event->guid;?>" class="wp-block-button__link has-codoswp-color-2-background-color has-text-color has-background" style="border-radius:5px;color:#ffffff">
-								READ MORE
-							</a>
-						</div>
-					</div>
-				</div>
-				<?php
-			}
-			?>
-		</div>
-	</div>
-	<?php
-    return ob_get_clean();
-}
-add_shortcode('upcoming-events', 'codoswp_upcoming_events');
-
-/**
  * Implement the theme options feature.
  */
 require get_template_directory() . '/inc/theme-settings.php';
@@ -322,8 +274,3 @@ if ( class_exists( 'WooCommerce' ) ) {
  * Require/Install theme specific plugins
  */
 require_once get_template_directory() . '/inc/codoswp-install-plugins.php';
-
-/**
- * Custom Functions
- */
-require_once get_template_directory() . '/inc/custom-functions.php';
