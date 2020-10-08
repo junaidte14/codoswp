@@ -210,7 +210,23 @@ function codoswp_get_customizer_css() {
 		.site-footer .site-info a,
 		.site-footer a:hover,
 		.has-codoswp-color-3-color,
-		body, button, input, select, optgroup, textarea{
+		body, button, input, select, optgroup, textarea,
+		input[type="text"],
+		input[type="email"],
+		input[type="url"],
+		input[type="password"],
+		input[type="search"],
+		input[type="number"],
+		input[type="tel"],
+		input[type="range"],
+		input[type="date"],
+		input[type="month"],
+		input[type="week"],
+		input[type="time"],
+		input[type="datetime"],
+		input[type="datetime-local"],
+		input[type="color"],
+		textarea{
 			color: <?php echo $color_3; ?>;
 		}
 		.has-codoswp-color-3-background-color,
@@ -218,7 +234,23 @@ function codoswp_get_customizer_css() {
 			background-color: <?php echo $color_3; ?>;
 		}
 		abbr,
-		acronym {
+		acronym,
+		input[type="text"],
+		input[type="email"],
+		input[type="url"],
+		input[type="password"],
+		input[type="search"],
+		input[type="number"],
+		input[type="tel"],
+		input[type="range"],
+		input[type="date"],
+		input[type="month"],
+		input[type="week"],
+		input[type="time"],
+		input[type="datetime"],
+		input[type="datetime-local"],
+		input[type="color"],
+		textarea, select, .widget-area .widget ul li {
 			border-color: <?php echo $color_3; ?>;
 		}
 		.top-bar,
