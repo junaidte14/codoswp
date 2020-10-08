@@ -3,19 +3,7 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
 	border: 1px solid;
-	border-color: $color__border-button;
 	border-radius: 0;
-	background: $color__background-button;
-	color: $color_4;
 	line-height: 1;
 	padding: 8px 16px;
-
-	&:hover {
-		border-color: $color__border-button-hover;
-	}
-
-	&:active,
-	&:focus {
-		border-color: $color__border-button-focus;
-	}
 }

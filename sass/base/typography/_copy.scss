@@ -18,8 +18,6 @@ address {
 }
 
 pre {
-	background: $color__background-pre;
-	color: $color_4;
 	font-family: $font__pre;
 	line-height: $font__line-height-pre;
 	margin-bottom: 1.6em;
@@ -37,14 +35,12 @@ var {
 
 abbr,
 acronym {
-	border-bottom: 1px dotted $color__border-abbr;
+	border-bottom: 1px dotted;
 	cursor: help;
 }
 
 mark,
 ins {
-	background: $color__background-ins;
-	color: $color_4;
 	text-decoration: none;
 }
 

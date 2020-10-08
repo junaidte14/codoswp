@@ -3,34 +3,11 @@ $color_2: #00C0D4;
 $color_3: #545454;
 $color_4: #FFFFFF;
 
-$color__primary: $color_1;
-$color__secondary: $color_2;
-
-$color__background-body: $color_4;
-$color__background-screen: $color_3;
-$color__background-hr: $color_3;
-$color__background-button: $color_2;
-$color__background-pre: $color_3;
-$color__background-ins: $color_3;
-
-$color__text-screen: $color_2;
-$color__text-input: $color_3;
-$color__text-input-focus: $color_3;
-$color__link: $color_1;
-$color__link-visited: $color_1;
-$color__link-hover: $color_2;
-$color__text-main: $color_3;
-
-$color__border-button: $color_2;
-$color__border-button-hover: $color_2;
-$color__border-button-focus: $color_2;
-$color__border-input: $color_3;
-$color__border-abbr: $color_3;
-
 $colors: (
 	'codoswp-color-1' 		: #0C87CC,
 	'codoswp-color-2' 	: #00C0D4,
-	'codoswp-color-3' 	: #545454
+	'codoswp-color-3' 	: #545454,
+	'codoswp-color-4' 	: #FFFFFF
 );
 
 @each $name, $color in $colors {
