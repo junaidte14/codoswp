@@ -16,7 +16,7 @@ get_header();
 ?>
 <div class="codoswp-container">
 	<div class="row">
-		<main id="primary" class="site-main col-sm-12 col-md-12">
+		<main id="primary" class="site-main col-sm-12 col-md-8">
 			
 			<?php
 			if ( have_posts() ) :
@@ -52,7 +52,7 @@ get_header();
 			?>
 		</main><!-- #main -->
 		<?php
-		//get_sidebar();
+		get_sidebar();
 		?>
 	</div><!-- .row -->
 </div><!-- .codoswp-container -->

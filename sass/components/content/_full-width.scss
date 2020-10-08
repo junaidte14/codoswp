@@ -1,0 +1,29 @@
+// home page styles
+.codo-full-page{
+	overflow: hidden;
+	display: block;
+	#primary{
+		margin: 0;
+	}
+	.wp-block-cover .codoswp-container{
+		width: calc(70% + 64px);
+	}
+	.wp-block-cover .wp-block-column {
+		align-self: center;
+	}
+
+	.wp-block-cover .wp-block-button__link{
+		font-size: 12px;
+		padding: 8px 16px;
+	}
+} 
+
+@media (max-width: 767px){
+	.codo-full-page .wp-block-cover .codoswp-container {
+		width: 94%;
+	}
+
+	.codo-full-page .wp-block-cover .wp-block-cover__inner-container {
+		width: 100%;
+	}
+}

@@ -13,7 +13,6 @@
 function codoswp_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
-	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
 	if ( isset( $wp_customize->selective_refresh ) ) {
 		$wp_customize->selective_refresh->add_partial(
@@ -44,24 +43,54 @@ function codoswp_customize_register( $wp_customize ) {
 		'title' =>  'Colors',
 	) );
 
-	$color_1 = '#0C87CC';
-	$color_2 = '#00C0D4';
-	$color_3 = '#545454';
-	$color_4 = '#737373';
-	$color_5 = '#0E90AC';
-	$color_6 = '#FFFFFF';
-	$color_7 = '#000000';
+	$color_1 = get_theme_mod( 'codoswp-color-1', '#0C87CC');
+	$color_2 = get_theme_mod( 'codoswp-color-2', '#00C0D4');
+	$color_3 = get_theme_mod( 'codoswp-color-3', '#545454');
+	$color_4 = get_theme_mod( 'codoswp-color-4', '#737373');
+	$color_5 = get_theme_mod( 'codoswp-color-5', '#0E90AC');
+	$color_6 = get_theme_mod( 'codoswp-color-6', '#FFFFFF');
+	$color_7 = get_theme_mod( 'codoswp-color-7', '#000000');
 
 	$txtcolors[] = array(
-		'slug'=>'codoswp_primary_color', 
+		'slug'=>'codoswp-color-1', 
 		'default' => $color_1,
-		'label' => 'Primary Color'
+		'label' => 'Color 1'
 	);
 
 	$txtcolors[] = array(
-		'slug'=>'codoswp_secondary_color', 
+		'slug'=>'codoswp-color-2', 
 		'default' => $color_2,
-		'label' => 'Secondary Color'
+		'label' => 'Color 2'
+	);
+
+	$txtcolors[] = array(
+		'slug'=>'codoswp-color-3', 
+		'default' => $color_3,
+		'label' => 'Color 3'
+	);
+
+	$txtcolors[] = array(
+		'slug'=>'codoswp-color-4', 
+		'default' => $color_4,
+		'label' => 'Color 4'
+	);
+
+	$txtcolors[] = array(
+		'slug'=>'codoswp-color-5', 
+		'default' => $color_5,
+		'label' => 'Color 5'
+	);
+
+	$txtcolors[] = array(
+		'slug'=>'codoswp-color-6', 
+		'default' => $color_6,
+		'label' => 'Color 6'
+	);
+
+	$txtcolors[] = array(
+		'slug'=>'codoswp-color-7', 
+		'default' => $color_7,
+		'label' => 'Color 7'
 	);
 
 	// add the settings and controls for each color
@@ -99,55 +128,6 @@ function codoswp_customize_register( $wp_customize ) {
 		'title' =>  'Top Bar',
 	) );
 
-	$topbarcolors[] = array(
-		'slug'=>'codoswp_topbar_bg_color', 
-		'default' => $color_1,
-		'label' => 'BG Color'
-	);
-
-	$topbarcolors[] = array(
-		'slug'=>'codoswp_topbar_text_color', 
-		'default' => $color_6,
-		'label' => 'Text Color'
-	);
-
-	$topbarcolors[] = array(
-		'slug'=>'codoswp_topbar_Link_color', 
-		'default' => $color_6,
-		'label' => 'Link Color'
-	);
-
-	$topbarcolors[] = array(
-		'slug'=>'codoswp_topbar_Link_bg_color', 
-		'default' => $color_2,
-		'label' => 'Link BG Color'
-	);
-
-	// add the settings and controls for each color
-	foreach( $topbarcolors as $txtcolor ) {
-	
-		// SETTINGS
-		$wp_customize->add_setting(
-			$txtcolor['slug'], array(
-				'default' => $txtcolor['default'],
-				'sanitize_callback' => 'sanitize_hex_color', 
-				'capability' =>  'edit_theme_options'
-			)
-		);
-
-		// CONTROLS
-		$wp_customize->add_control(
-			new WP_Customize_Color_Control(
-				$wp_customize,
-				$txtcolor['slug'], 
-				array('label' => $txtcolor['label'], 
-				'section' => 'topbar',
-				'settings' => $txtcolor['slug'])
-			)
-		);
-		
-	}
-
 	/*******************************************
 	Header Section
 	********************************************/
@@ -157,61 +137,6 @@ function codoswp_customize_register( $wp_customize ) {
 		'title' =>  'Header Section',
 	) );
 
-	$headercolors[] = array(
-		'slug'=>'codoswp_header_bg_color', 
-		'default' => $color_6,
-		'label' => 'Header BG Color'
-	);
-
-	$headercolors[] = array(
-		'slug'=>'codoswp_header_title_color', 
-		'default' => $color_2,
-		'label' => 'Title Color'
-	);
-
-	$headercolors[] = array(
-		'slug'=>'codoswp_header_desc_color', 
-		'default' => $color_3,
-		'label' => 'Description Color'
-	);
-
-	$headercolors[] = array(
-		'slug'=>'codoswp_menu_color', 
-		'default' => $color_3,
-		'label' => 'Menu Text Color'
-	);
-
-	$headercolors[] = array(
-		'slug'=>'codoswp_menu_hover_color', 
-		'default' => $color_3,
-		'label' => 'Menu Text Hover Color'
-	);
-
-	// add the settings and controls for each color
-	foreach( $headercolors as $txtcolor ) {
-	
-		// SETTINGS
-		$wp_customize->add_setting(
-			$txtcolor['slug'], array(
-				'default' => $txtcolor['default'],
-				'sanitize_callback' => 'sanitize_hex_color', 
-				'capability' =>  'edit_theme_options'
-			)
-		);
-
-		// CONTROLS
-		$wp_customize->add_control(
-			new WP_Customize_Color_Control(
-				$wp_customize,
-				$txtcolor['slug'], 
-				array('label' => $txtcolor['label'], 
-				'section' => 'headersection',
-				'settings' => $txtcolor['slug'])
-			)
-		);
-		
-	}
-
 	/*******************************************
 	Footer Section
 	********************************************/
@@ -220,49 +145,6 @@ function codoswp_customize_register( $wp_customize ) {
 	$wp_customize->add_section( 'footersection' , array(
 		'title' =>  'Footer Section',
 	) );
-
-	$footercolors[] = array(
-		'slug'=>'codoswp_footer_bg_color', 
-		'default' => $color_6,
-		'label' => 'Footer BG Color'
-	);
-
-	$footercolors[] = array(
-		'slug'=>'codoswp_footer_text_color', 
-		'default' => $color_3,
-		'label' => 'Footer Text Color'
-	);
-
-	$footercolors[] = array(
-		'slug'=>'codoswp_footer_link_color', 
-		'default' => $color_3,
-		'label' => 'Footer Link Color'
-	);
-
-	// add the settings and controls for each color
-	foreach( $footercolors as $txtcolor ) {
-	
-		// SETTINGS
-		$wp_customize->add_setting(
-			$txtcolor['slug'], array(
-				'default' => $txtcolor['default'],
-				'sanitize_callback' => 'sanitize_hex_color', 
-				'capability' =>  'edit_theme_options'
-			)
-		);
-
-		// CONTROLS
-		$wp_customize->add_control(
-			new WP_Customize_Color_Control(
-				$wp_customize,
-				$txtcolor['slug'], 
-				array('label' => $txtcolor['label'], 
-				'section' => 'footersection',
-				'settings' => $txtcolor['slug'])
-			)
-		);
-		
-	}
 
 }
 add_action( 'customize_register', 'codoswp_customize_register' );
@@ -296,95 +178,86 @@ add_action( 'customize_preview_init', 'codoswp_customize_preview_js' );
 function codoswp_get_customizer_css() {
     ob_start();
 
-	$color_1 = '#0C87CC';
-	$color_2 = '#00C0D4';
-	$color_3 = '#545454';
-	$color_4 = '#737373';
-	$color_5 = '#0E90AC';
-	$color_6 = '#FFFFFF';
-	$color_7 = '#000000';
+	$color_1 = get_theme_mod( 'codoswp-color-1', '#0C87CC');
+	$color_2 = get_theme_mod( 'codoswp-color-2', '#00C0D4');
+	$color_3 = get_theme_mod( 'codoswp-color-3', '#545454');
+	$color_4 = get_theme_mod( 'codoswp-color-4', '#737373');
+	$color_5 = get_theme_mod( 'codoswp-color-5', '#0E90AC');
+	$color_6 = get_theme_mod( 'codoswp-color-6', '#FFFFFF');
+	$color_7 = get_theme_mod( 'codoswp-color-7', '#000000');
 
-	$codoswp_primary_color = get_theme_mod( 'codoswp_primary_color', $color_1);
-	$codoswp_secondary_color = get_theme_mod( 'codoswp_secondary_color', $color_2);
-
-	$codoswp_topbar_bg_color = get_theme_mod('codoswp_topbar_bg_color', $color_1);
-	$codoswp_topbar_text_color = get_theme_mod('codoswp_topbar_text_color', $color_6);
-	$codoswp_topbar_Link_color = get_theme_mod('codoswp_topbar_Link_color', $color_6);
-	$codoswp_topbar_Link_bg_color = get_theme_mod('codoswp_topbar_Link_bg_color', $color_2);
-
-	$codoswp_header_bg_color = get_theme_mod( 'codoswp_header_bg_color', $color_6);
-	$codoswp_header_title_color = get_theme_mod( 'codoswp_header_title_color', $color_2);
-	$codoswp_header_desc_color = get_theme_mod('codoswp_header_desc_color', $color_3);
-	$codoswp_menu_color = get_theme_mod('codoswp_menu_color', $color_3);
-	$codoswp_menu_hover_color = get_theme_mod('codoswp_menu_hover_color', $color_3);
-
-	$codoswp_footer_bg_color = get_theme_mod('codoswp_footer_bg_color', $color_6);
-	$codoswp_footer_text_color = get_theme_mod('codoswp_footer_text_color', $color_3);
-	$codoswp_footer_link_color = get_theme_mod('codoswp_footer_link_color', $color_3);
     ?>
-		.top-bar{
-			background-color: <?php echo $codoswp_topbar_bg_color; ?>;
-			color: <?php echo $codoswp_topbar_text_color; ?>;
-		}
-		.top-bar .navbar-nav li a,
-		.top-bar .navbar-nav li a:hover{
-			color: <?php echo $codoswp_topbar_Link_color; ?>;
-		}
-		.top-bar ul li:nth-child(2) a{
-			background-color: <?php echo $codoswp_topbar_Link_bg_color; ?>;
-		}
-		.site-header{
-			background-color: <?php echo $codoswp_header_bg_color; ?>;
-		}
-		.site-title a,
-		.site-title a:visited{
-			color: <?php echo $codoswp_header_title_color; ?>;
-		}
-		.page article header{
+		.top-bar,
+		.page article header,
+		.has-codoswp-color-1-background-color{
 			background-color: <?php echo $color_1; ?>;
-			color: #ffffff;
 		}
-		.site-footer{
-			background-color: <?php echo $codoswp_footer_bg_color; ?>;
+		h1, h2, h4, h6,
+		a:hover,
+		.has-codoswp-color-1-color{
+			color: <?php echo $color_1; ?>;
+		}
+		.top-bar ul li:nth-child(2) a,
+		.has-codoswp-color-2-background-color{
+			background-color: <?php echo $color_2; ?>;
+		}
+		a, a:visited,
+		.site-title a,
+		.site-title a:visited,
+		.has-codoswp-color-2-color{
+			color: <?php echo $color_2; ?>;
+		}
+		.navbar-nav>.active>a>span{
+			border-bottom-color: <?php echo $color_2; ?>;
 		}
 		.navbar-nav li a,
-		.navbar-nav .fa-search{
-			color: <?php echo $codoswp_menu_color; ?>;
-		}
+		.navbar-nav .fa-search,
 		.navbar-nav li a:hover,
 		.navbar-nav li a:active,
 		.navbar-nav li a:focus,
-		.navbar-nav .fa-search:hover{
-			color: <?php echo $codoswp_menu_hover_color; ?>;
+		.navbar-nav .fa-search:hover,
+		.site-description,
+		.site-footer,
+		.site-footer .site-info a,
+		.site-footer a:hover,
+		.has-codoswp-color-3-color,
+		body, button, input, select, optgroup, textarea{
+			color: <?php echo $color_3; ?>;
 		}
-		.navbar-nav>.active>a>span{
-			border-bottom-color: <?php echo $codoswp_secondary_color; ?>;
+		.has-codoswp-color-3-background-color {
+			background-color: <?php echo $color_3; ?>;
 		}
-		h1, h2, h4, h6,{
-			color: <?php echo $codoswp_primary_color; ?>;
+		.has-codoswp-color-4-color {
+			color: <?php echo $color_4; ?>;
 		}
-		.site-description{
-			color: <?php echo $codoswp_header_desc_color; ?>;
+		.has-codoswp-color-4-background-color {
+			background-color: <?php echo $color_4; ?>;
 		}
-		.site-footer{
-			background-color: <?php echo $codoswp_footer_bg_color; ?>;
-			color: <?php echo $codoswp_footer_text_color; ?>;
+		.has-codoswp-color-5-color {
+			color: <?php echo $color_5; ?>;
 		}
-		.site-footer .site-info a{
-			color: <?php echo $codoswp_footer_link_color; ?>;
+		.has-codoswp-color-5-background-color {
+			background-color: <?php echo $color_5; ?>;
 		}
-		.site-footer a:hover{
-			color: <?php echo $codoswp_footer_text_color; ?>;
+		.top-bar,
+		.top-bar .navbar-nav li a,
+		.top-bar .navbar-nav li a:hover,
+		.page article header,
+		.has-codoswp-color-6-color{
+			color: <?php echo $color_6; ?>;
 		}
-		a, a:visited{
-			color: <?php echo $codoswp_secondary_color; ?>;
+		.site-header,
+		.site-footer,
+		.has-codoswp-color-6-background-color{
+			background-color: <?php echo $color_6; ?>;
 		}
-		a:hover{
-			color: <?php echo $codoswp_primary_color; ?>;
+		.has-codoswp-color-7-color {
+			color: <?php echo $color_7; ?>;
 		}
-	  
-    <?php
-
+		.has-codoswp-color-7-background-color {
+			background-color: <?php echo $color_7; ?>;
+		}	
+		<?php
     $css = ob_get_clean();
     return $css;
 }

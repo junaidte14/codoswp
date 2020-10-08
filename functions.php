@@ -193,31 +193,49 @@ add_action( 'after_setup_theme', 'codoswp_register_navwalker' );
  * Register custom color pallets
  */
 
+$color_1 = get_theme_mod( 'codoswp-color-1', '#0C87CC');
+$color_2 = get_theme_mod( 'codoswp-color-2', '#00C0D4');
+$color_3 = get_theme_mod( 'codoswp-color-3', '#545454');
+$color_4 = get_theme_mod( 'codoswp-color-4', '#737373');
+$color_5 = get_theme_mod( 'codoswp-color-5', '#0E90AC');
+$color_6 = get_theme_mod( 'codoswp-color-6', '#FFFFFF');
+$color_7 = get_theme_mod( 'codoswp-color-7', '#000000');
+
 add_theme_support( 'editor-color-palette', array(
 	array(
 		'name'  => __( 'Color 1', CODOSWP ),
 		'slug'  => 'codoswp-color-1',
-		'color'	=> '#0C87CC',
+		'color'	=> $color_1,
 	),
 	array(
 		'name'  => __( 'Color 2', CODOSWP ),
 		'slug'  => 'codoswp-color-2',
-		'color' => '#00C0D4',
+		'color' => $color_2,
 	),
 	array(
 		'name'  => __( 'Color 3', CODOSWP ),
 		'slug'  => 'codoswp-color-3',
-		'color' => '#545454',
+		'color' => $color_3,
 	),
 	array(
 		'name'	=> __( 'Color 4', CODOSWP ),
 		'slug'	=> 'codoswp-color-4',
-		'color'	=> '#737373',
+		'color'	=> $color_4,
 	),
 	array(
 		'name'	=> __( 'Color 5', CODOSWP ),
 		'slug'	=> 'codoswp-color-5',
-		'color'	=> '#0E90AC',
+		'color'	=> $color_5,
+	),
+	array(
+		'name'	=> __( 'Color 6', CODOSWP ),
+		'slug'	=> 'codoswp-color-6',
+		'color'	=> $color_6,
+	),
+	array(
+		'name'	=> __( 'Color 7', CODOSWP ),
+		'slug'	=> 'codoswp-color-7',
+		'color'	=> $color_7,
 	),
 ) );
 
@@ -235,11 +253,6 @@ require get_template_directory() . '/inc/menu-search-icon.php';
  * Implement the Show/Hide page title feature.
  */
 require get_template_directory() . '/inc/show-hide-title.php';
-
-/**
- * Implement the Custom Header feature.
- */
-require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.
