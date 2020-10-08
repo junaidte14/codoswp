@@ -196,10 +196,7 @@ add_action( 'after_setup_theme', 'codoswp_register_navwalker' );
 $color_1 = get_theme_mod( 'codoswp-color-1', '#0C87CC');
 $color_2 = get_theme_mod( 'codoswp-color-2', '#00C0D4');
 $color_3 = get_theme_mod( 'codoswp-color-3', '#545454');
-$color_4 = get_theme_mod( 'codoswp-color-4', '#737373');
-$color_5 = get_theme_mod( 'codoswp-color-5', '#0E90AC');
-$color_6 = get_theme_mod( 'codoswp-color-6', '#FFFFFF');
-$color_7 = get_theme_mod( 'codoswp-color-7', '#000000');
+$color_4 = get_theme_mod( 'codoswp-color-4', '#FFFFFF');
 
 add_theme_support( 'editor-color-palette', array(
 	array(
@@ -221,21 +218,6 @@ add_theme_support( 'editor-color-palette', array(
 		'name'	=> __( 'Color 4', CODOSWP ),
 		'slug'	=> 'codoswp-color-4',
 		'color'	=> $color_4,
-	),
-	array(
-		'name'	=> __( 'Color 5', CODOSWP ),
-		'slug'	=> 'codoswp-color-5',
-		'color'	=> $color_5,
-	),
-	array(
-		'name'	=> __( 'Color 6', CODOSWP ),
-		'slug'	=> 'codoswp-color-6',
-		'color'	=> $color_6,
-	),
-	array(
-		'name'	=> __( 'Color 7', CODOSWP ),
-		'slug'	=> 'codoswp-color-7',
-		'color'	=> $color_7,
 	),
 ) );
 

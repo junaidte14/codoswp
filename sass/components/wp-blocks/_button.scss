@@ -9,10 +9,10 @@
 	}
 
 	&:not(.has-text-color) {
-		color: white;
+		color: $color_4;
 
 		&:hover {
-			color: white;
+			color: $color_4;
 		}
 	}
 

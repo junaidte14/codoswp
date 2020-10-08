@@ -20,14 +20,4 @@
 		} );
 	} );
 
-	wp.customize( 'codoswp-color-1', function( value ) {
-		value.bind( function( to ) {
-			$( '.page article header, .has-codoswp-color-1-background-color' ).css( {
-				backgroundColor: to,
-			} );
-			$( 'h1, h2, h4, h6, a:hover, .has-codoswp-color-1-color' ).css( {
-				color: to,
-			} );
-		} );
-	} );
 }( jQuery ) );

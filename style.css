@@ -72,22 +72,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	background-color: #545454;
 }
 
-.has-codoswp-color-4-color {
-	color: #737373;
-}
-
-.has-codoswp-color-4-background-color {
-	background-color: #737373;
-}
-
-.has-codoswp-color-5-color {
-	color: #0E90AC;
-}
-
-.has-codoswp-color-5-background-color {
-	background-color: #0E90AC;
-}
-
 /*--------------------------------------------------------------
 # Generic
 --------------------------------------------------------------*/
@@ -462,7 +446,8 @@ address {
 }
 
 pre {
-	background: #737373;
+	background: #545454;
+	color: #FFFFFF;
 	font-family: "Courier 10 Pitch", courier, monospace;
 	line-height: 1.6;
 	margin-bottom: 1.6em;
@@ -486,7 +471,8 @@ acronym {
 
 mark,
 ins {
-	background: #737373;
+	background: #545454;
+	color: #FFFFFF;
 	text-decoration: none;
 }
 
@@ -600,9 +586,9 @@ input[type="submit"] {
 	border-color: #00C0D4;
 	border-radius: 0;
 	background: #00C0D4;
-	color: rgba(0, 0, 0, 0.8);
+	color: #FFFFFF;
 	line-height: 1;
-	padding: 0.45em 1em 0.45em;
+	padding: 8px 16px;
 }
 
 button:hover,
@@ -639,7 +625,7 @@ input[type="datetime-local"],
 input[type="color"],
 textarea {
 	color: #545454;
-	border: 1px solid #737373;
+	border: 1px solid #545454;
 	border-radius: 0;
 	padding: 3px;
 }
@@ -666,7 +652,7 @@ textarea:focus {
 }
 
 select {
-	border: 1px solid #737373;
+	border: 1px solid #545454;
 }
 
 textarea {
@@ -735,7 +721,7 @@ textarea {
 
 .navbar-nav > .active > a > span {
 	border-bottom: 4px solid;
-	border-bottom-color: #0E90AC;
+	border-bottom-color: #0C87CC;
 	padding-bottom: 5px;
 }
 
@@ -819,7 +805,7 @@ textarea {
 .search .search-form input[type="search"]:focus {
 	width: 250px;
 	outline: 0;
-	background-color: #fff;
+	background-color: #FFFFFF;
 	cursor: text;
 }
 
@@ -854,7 +840,7 @@ textarea {
 		position: absolute;
 		top: 10px;
 		left: 0;
-		color: #999;
+		color: #545454;
 		-webkit-transform: none;
 		transform: none;
 	}
@@ -976,11 +962,11 @@ article header .entry-title {
 }
 
 .wp-block-button__link:not(.has-text-color) {
-	color: white;
+	color: #FFFFFF;
 }
 
 .wp-block-button__link:not(.has-text-color):hover {
-	color: white;
+	color: #FFFFFF;
 }
 
 .wp-block-button__link:not(.has-background) {
@@ -1015,20 +1001,12 @@ article header .entry-title {
 	background-color: #212121;
 }
 
-.wp-block-button__link.has-codoswp-color-4-color:hover, .wp-block-button__link.has-codoswp-color-4-color:focus {
-	color: #737373;
-}
-
-.wp-block-button__link.has-codoswp-color-4-background-color:hover, .wp-block-button__link.has-codoswp-color-4-background-color:focus {
-	background-color: #404040;
-}
-
-.wp-block-button__link.has-codoswp-color-5-color:hover, .wp-block-button__link.has-codoswp-color-5-color:focus {
-	color: #0E90AC;
-}
-
-.wp-block-button__link.has-codoswp-color-5-background-color:hover, .wp-block-button__link.has-codoswp-color-5-background-color:focus {
-	background-color: #06414e;
+/* Quote Block
+--------------------------------------------- */
+.wp-block-quote {
+	border-left: 4px solid #0C87CC;
+	margin: 0 0 28px;
+	padding-left: 1em;
 }
 
 /* Comments
@@ -1060,7 +1038,7 @@ article header .entry-title {
 
 .widget-area .widget ul li {
 	padding: .5rem 1.25rem;
-	border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+	border-bottom: 1px solid #545454;
 }
 
 .widget-area .widget ul li a {
@@ -1214,12 +1192,12 @@ article header .entry-title {
 }
 
 .screen-reader-text:focus {
-	background-color: #737373;
+	background-color: #545454;
 	border-radius: 3px;
 	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
 	clip: auto !important;
 	clip-path: none;
-	color: #0E90AC;
+	color: #00C0D4;
 	display: block;
 	font-size: 0.875rem;
 	font-weight: 700;

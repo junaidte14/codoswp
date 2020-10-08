@@ -1,22 +1,19 @@
 $color_1: #0C87CC;
 $color_2: #00C0D4;
 $color_3: #545454;
-$color_4: #737373;
-$color_5: #0E90AC;
-$color_6: #FFFFFF;
-$color_7: #000000;
+$color_4: #FFFFFF;
 
 $color__primary: $color_1;
 $color__secondary: $color_2;
 
-$color__background-body: $color_6;
-$color__background-screen: $color_4;
+$color__background-body: $color_4;
+$color__background-screen: $color_3;
 $color__background-hr: $color_3;
 $color__background-button: $color_2;
-$color__background-pre: $color_4;
-$color__background-ins: $color_4;
+$color__background-pre: $color_3;
+$color__background-ins: $color_3;
 
-$color__text-screen: $color_5;
+$color__text-screen: $color_2;
 $color__text-input: $color_3;
 $color__text-input-focus: $color_3;
 $color__link: $color_1;
@@ -27,15 +24,13 @@ $color__text-main: $color_3;
 $color__border-button: $color_2;
 $color__border-button-hover: $color_2;
 $color__border-button-focus: $color_2;
-$color__border-input: $color_4;
+$color__border-input: $color_3;
 $color__border-abbr: $color_3;
 
 $colors: (
 	'codoswp-color-1' 		: #0C87CC,
 	'codoswp-color-2' 	: #00C0D4,
-	'codoswp-color-3' 	: #545454,
-    'codoswp-color-4' 		: #737373,
-	'codoswp-color-5' 		: #0E90AC,
+	'codoswp-color-3' 	: #545454
 );
 
 @each $name, $color in $colors {

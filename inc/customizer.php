@@ -46,10 +46,7 @@ function codoswp_customize_register( $wp_customize ) {
 	$color_1 = get_theme_mod( 'codoswp-color-1', '#0C87CC');
 	$color_2 = get_theme_mod( 'codoswp-color-2', '#00C0D4');
 	$color_3 = get_theme_mod( 'codoswp-color-3', '#545454');
-	$color_4 = get_theme_mod( 'codoswp-color-4', '#737373');
-	$color_5 = get_theme_mod( 'codoswp-color-5', '#0E90AC');
-	$color_6 = get_theme_mod( 'codoswp-color-6', '#FFFFFF');
-	$color_7 = get_theme_mod( 'codoswp-color-7', '#000000');
+	$color_4 = get_theme_mod( 'codoswp-color-4', '#FFFFFF');
 
 	$txtcolors[] = array(
 		'slug'=>'codoswp-color-1', 
@@ -73,24 +70,6 @@ function codoswp_customize_register( $wp_customize ) {
 		'slug'=>'codoswp-color-4', 
 		'default' => $color_4,
 		'label' => 'Color 4'
-	);
-
-	$txtcolors[] = array(
-		'slug'=>'codoswp-color-5', 
-		'default' => $color_5,
-		'label' => 'Color 5'
-	);
-
-	$txtcolors[] = array(
-		'slug'=>'codoswp-color-6', 
-		'default' => $color_6,
-		'label' => 'Color 6'
-	);
-
-	$txtcolors[] = array(
-		'slug'=>'codoswp-color-7', 
-		'default' => $color_7,
-		'label' => 'Color 7'
 	);
 
 	// add the settings and controls for each color
@@ -181,10 +160,7 @@ function codoswp_get_customizer_css() {
 	$color_1 = get_theme_mod( 'codoswp-color-1', '#0C87CC');
 	$color_2 = get_theme_mod( 'codoswp-color-2', '#00C0D4');
 	$color_3 = get_theme_mod( 'codoswp-color-3', '#545454');
-	$color_4 = get_theme_mod( 'codoswp-color-4', '#737373');
-	$color_5 = get_theme_mod( 'codoswp-color-5', '#0E90AC');
-	$color_6 = get_theme_mod( 'codoswp-color-6', '#FFFFFF');
-	$color_7 = get_theme_mod( 'codoswp-color-7', '#000000');
+	$color_4 = get_theme_mod( 'codoswp-color-4', '#FFFFFF');
 
     ?>
 		.top-bar,
@@ -227,35 +203,17 @@ function codoswp_get_customizer_css() {
 		.has-codoswp-color-3-background-color {
 			background-color: <?php echo $color_3; ?>;
 		}
-		.has-codoswp-color-4-color {
-			color: <?php echo $color_4; ?>;
-		}
-		.has-codoswp-color-4-background-color {
-			background-color: <?php echo $color_4; ?>;
-		}
-		.has-codoswp-color-5-color {
-			color: <?php echo $color_5; ?>;
-		}
-		.has-codoswp-color-5-background-color {
-			background-color: <?php echo $color_5; ?>;
-		}
 		.top-bar,
 		.top-bar .navbar-nav li a,
 		.top-bar .navbar-nav li a:hover,
 		.page article header,
-		.has-codoswp-color-6-color{
-			color: <?php echo $color_6; ?>;
+		.has-codoswp-color-4-color{
+			color: <?php echo $color_4; ?>;
 		}
 		.site-header,
 		.site-footer,
-		.has-codoswp-color-6-background-color{
-			background-color: <?php echo $color_6; ?>;
-		}
-		.has-codoswp-color-7-color {
-			color: <?php echo $color_7; ?>;
-		}
-		.has-codoswp-color-7-background-color {
-			background-color: <?php echo $color_7; ?>;
+		.has-codoswp-color-4-background-color{
+			background-color: <?php echo $color_4; ?>;
 		}	
 		<?php
     $css = ob_get_clean();
