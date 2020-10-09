@@ -1120,12 +1120,21 @@ article header .entry-title {
 	padding: 5px 0;
 }
 
+.site-footer .site-title {
+	margin: 5px 0;
+	padding: 5px 0;
+	line-height: 12px;
+	font-size: 18px;
+}
+
 .site-footer a {
 	font-size: 14px;
 }
 
 .site-footer p {
 	font-size: 12px;
+	padding: 5px 0;
+	margin: 5px 0;
 }
 
 /*--------------------------------------------------------------
