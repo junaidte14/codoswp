@@ -24,7 +24,7 @@ article{
     padding: 0;
 }
 
-article header.entry-header{
+.page-title{
     padding: 20px 5px;
 } 
 
@@ -49,11 +49,11 @@ article header .entry-title{
 
 .alignwide,
 .alignfull {
-	margin: 0 calc(50% - 50vw) 32px calc(50% - 50vw);
+	margin: 0 calc(50% - 50vw) 0 calc(50% - 50vw);
 	max-width: none;
 	width: 100vw;
 }
 
-.codo-hide-title article header{
+.codo-hide-title .page-title{
 	display: none;
 }

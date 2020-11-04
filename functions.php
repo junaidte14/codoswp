@@ -33,8 +33,6 @@ if ( ! function_exists( 'codoswp_setup' ) ) :
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on codoswp, use a find and replace
-		 * to change CODOSWP to the name of your theme in all the template files.
 		 */
 		load_theme_textdomain( CODOSWP, get_template_directory() . '/languages' );
 
@@ -222,11 +220,6 @@ add_theme_support( 'editor-color-palette', array(
 ) );
 
 /**
- * Implement the theme options feature.
- */
-require get_template_directory() . '/inc/theme-settings.php';
-
-/**
  * Implement the menu search icon feature.
  */
 require get_template_directory() . '/inc/menu-search-icon.php';
@@ -264,8 +257,3 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
-
-/**
- * Require/Install theme specific plugins
- */
-require_once get_template_directory() . '/inc/codoswp-install-plugins.php';

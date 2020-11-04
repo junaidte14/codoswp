@@ -13,8 +13,8 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="codoswp-container">
-			<div class="row" style="border-bottom: 1px dotted;">
-				<div class="col-sm-12 col-md-2">
+			<div class="row">
+				<div class="col-sm-12 col-md-4">
 					<?php
 						if( function_exists( 'the_custom_logo' ) ) {
 							if(has_custom_logo()) {
@@ -31,8 +31,12 @@
 						} 
 					?>
 				</div>
-				<div class="col-sm-12 col-md-10">
-					<p>© Copyright 2020. All rights reserved.</p>
+				<div class="col-sm-12 col-md-8">
+					<p class="text-right">
+						<?php
+						printf( esc_html__( '© Copyright %s. All rights reserved.', CODOSWP ), date("Y") );
+						?>
+					</p>
 				</div>
 			</div>
 			<div class="footer-menu">
@@ -59,7 +63,7 @@
 				<span class="sep"> | </span>
 					<?php
 					/* translators: 1: Theme name, 2: Theme author. */
-					printf( esc_html__( 'Theme: %1$s by %2$s', CODOSWP ), CODOSWP, '<a href="https://codoplex.com">Junaid Hassan.</a>' );
+					printf( esc_html__( 'Theme: %1$s developed by %2$s', CODOSWP ), CODOSWP, '<a href="https://codoplex.com">CODOPLEX.</a>' );
 					?>
 			</div><!-- .site-info -->
 		</div><!-- .codoswp-container -->

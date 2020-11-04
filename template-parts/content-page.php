@@ -12,17 +12,13 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header alignwide">
 		<div class="codoswp-container">
-			<?php 
-				global $post;
-				if ($post->post_parent){
-					?>
-					<p class="m-0"><?php echo get_post($post->post_parent)->post_title;?></p>
-					<?php
-				}
-			?>
-			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+			<div class="page-title">
+				<?php
+					the_title( '<h1>', '</h1>' );
+				?>
+			</div>
 		</div>
-	</header><!-- .entry-header -->
+	</header>
 
 	<?php codoswp_post_thumbnail(); ?>
 

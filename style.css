@@ -1,9 +1,9 @@
 /*!
-Theme Name: codoswp
-Theme URI: http://underscores.me/
-Author: Junaid Hassan
-Author URI: #
-Description: Description
+Theme Name: CODOSWP
+Theme URI: http://wpdemos.codoplex.com/codoswp
+Author: CODOPLEX
+Author URI: https://codoplex.com
+Description: A WordPress theme developed using Bootstrap, Gutenberg Blocks, and _S starter template.
 Version: 1.0.0
 Tested up to: 5.4
 Requires PHP: 5.6
@@ -548,7 +548,7 @@ figure {
 }
 
 table {
-	margin: 0 0 1.5em;
+	margin: 0 0 0;
 	width: 100%;
 }
 
@@ -568,7 +568,7 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	border: 1px solid;
+	border: none;
 	border-radius: 0;
 	line-height: 1;
 	padding: 8px 16px;
@@ -835,7 +835,7 @@ textarea {
 }
 
 .codo-full-page .wp-block-cover .wp-block-button__link {
-	font-size: 12px;
+	font-size: 14px;
 	padding: 8px 16px;
 }
 
@@ -876,7 +876,7 @@ article {
 	padding: 0;
 }
 
-article header.entry-header {
+.page-title {
 	padding: 20px 5px;
 }
 
@@ -901,23 +901,36 @@ article header .entry-title {
 
 .alignwide,
 .alignfull {
-	margin: 0 calc(50% - 50vw) 32px calc(50% - 50vw);
+	margin: 0 calc(50% - 50vw) 0 calc(50% - 50vw);
 	max-width: none;
 	width: 100vw;
 }
 
-.codo-hide-title article header {
+.codo-hide-title .page-title {
 	display: none;
 }
 
 /* WP Blocks
 --------------------------------------------- */
+/* Cover Block
+--------------------------------------------- */
+.home .wp-block-cover .wp-block-cover__inner-container {
+	width: 70%;
+	margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+	.home .wp-block-cover .wp-block-cover__inner-container {
+		width: 90%;
+	}
+}
+
 /* Button Block
 --------------------------------------------- */
 .wp-block-button__link {
 	border-radius: 0;
 	padding: 8px 16px;
-	font-size: 12px;
+	font-size: 14px;
 	text-transform: uppercase;
 }
 
@@ -1117,24 +1130,38 @@ article header .entry-title {
 /* Footer
 --------------------------------------------- */
 .site-footer {
-	padding: 5px 0;
-}
-
-.site-footer .site-title {
-	margin: 5px 0;
-	padding: 5px 0;
-	line-height: 12px;
-	font-size: 18px;
+	padding: 10px 0;
+	background-color: #eee;
 }
 
 .site-footer a {
+	font-size: 16px;
+}
+
+.site-footer .site-info a {
 	font-size: 14px;
+	text-decoration: underline;
 }
 
 .site-footer p {
-	font-size: 12px;
-	padding: 5px 0;
-	margin: 5px 0;
+	font-size: 16px;
+	padding: 0;
+	margin: 0;
+}
+
+.site-footer .footer-menu a {
+	font-size: 16px;
+	text-decoration: underline;
+}
+
+.site-footer .footer-menu a:first-child {
+	padding-left: 0;
+}
+
+.site-footer .site-title {
+	margin: 0;
+	padding: 0;
+	font-size: 18px;
 }
 
 /*--------------------------------------------------------------
