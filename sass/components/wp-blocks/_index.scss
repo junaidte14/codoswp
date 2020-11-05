@@ -1,11 +1,71 @@
-/* Cover Block
---------------------------------------------- */
-@import "./block-cover";
+//cover block && coulmns block
+.page-template-full-width .wp-block-cover .wp-block-cover__inner-container,
+.page-template-full-width .wp-block-columns,
+.page-template-full-width .wp-block-group {
+    width: 70%;
+    margin: 0 auto;
+}
 
-/* Button Block
---------------------------------------------- */
-@import "./button";
+//coulmns block
+.page-template-full-width .wp-block-cover__inner-container .wp-block-columns,
+.page-template-full-width .wp-block-cover__inner-container .wp-block-group{
+    width: 100%;
+}
 
-/* Quote Block
---------------------------------------------- */
-@import "./blockquote";
+@media (max-width: 767px){
+    .page-template-full-width .wp-block-cover .wp-block-cover__inner-container,
+	.page-template-full-width .wp-block-columns,
+	.page-template-full-width .wp-block-group {
+        width: 90%;
+    }
+} 
+//buttons block
+
+.wp-block-button__link {
+	border-radius: 0;
+	padding: 8px 16px;
+	font-size: 16px;
+	text-transform: uppercase;
+
+	&:hover {
+		text-decoration: none;
+	}
+
+	&:not(.has-text-color) {
+		color: $color_4;
+
+		&:hover {
+			color: $color_4;
+		}
+	}
+
+	&:not(.has-background) {
+		background-color: $color_5;
+
+		&:hover,
+		&:focus {
+			background-color: darken( $color_5, 20% );
+		}
+	}
+
+	@each $name, $color in $colors {
+
+		&.has-#{$name}-color:hover,
+		&.has-#{$name}-color:focus {
+			color: $color;
+		}
+
+		&.has-#{$name}-background-color:hover,
+		&.has-#{$name}-background-color:focus {
+			background-color: darken( $color, 20% );
+		}
+	}
+
+}
+
+//blockquotes block
+.wp-block-quote{
+    border-left: 4px solid;
+    margin: 0 0 28px;
+    padding-left: 1em;
+}

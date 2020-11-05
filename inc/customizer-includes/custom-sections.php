@@ -9,10 +9,11 @@ $wp_customize->add_section( 'Color Scheme' , array(
     'title' =>  'Colors',
 ) );
 
-$color_1 = get_theme_mod( 'codoswp-color-1', '#0C87CC');
-$color_2 = get_theme_mod( 'codoswp-color-2', '#00C0D4');
+$color_1 = get_theme_mod( 'codoswp-color-1', '#253b80');
+$color_2 = get_theme_mod( 'codoswp-color-2', '#179bd7');
 $color_3 = get_theme_mod( 'codoswp-color-3', '#545454');
-$color_4 = get_theme_mod( 'codoswp-color-4', '#FFFFFF');
+$color_4 = get_theme_mod( 'codoswp-color-4', '#ffffff');
+$color_5 = get_theme_mod( 'codoswp-color-5', '#ff6000');
 
 $txtcolors[] = array(
     'slug'=>'codoswp-color-1', 
@@ -36,6 +37,12 @@ $txtcolors[] = array(
     'slug'=>'codoswp-color-4', 
     'default' => $color_4,
     'label' => 'Color 4'
+);
+
+$txtcolors[] = array(
+    'slug'=>'codoswp-color-5', 
+    'default' => $color_5,
+    'label' => 'Color 5'
 );
 
 // add the settings and controls for each color

@@ -4,19 +4,19 @@ Theme Name: CODOSWP
 WooCommerce styles override
 */
 .has-codoswp-color-1-color {
-	color: #0C87CC;
+	color: #253b80;
 }
 
 .has-codoswp-color-1-background-color {
-	background-color: #0C87CC;
+	background-color: #253b80;
 }
 
 .has-codoswp-color-2-color {
-	color: #00C0D4;
+	color: #179bd7;
 }
 
 .has-codoswp-color-2-background-color {
-	background-color: #00C0D4;
+	background-color: #179bd7;
 }
 
 .has-codoswp-color-3-color {
@@ -28,11 +28,19 @@ WooCommerce styles override
 }
 
 .has-codoswp-color-4-color {
-	color: #FFFFFF;
+	color: #ffffff;
 }
 
 .has-codoswp-color-4-background-color {
-	background-color: #FFFFFF;
+	background-color: #ffffff;
+}
+
+.has-codoswp-color-5-color {
+	color: #ff6000;
+}
+
+.has-codoswp-color-5-background-color {
+	background-color: #ff6000;
 }
 
 /**
@@ -364,7 +372,7 @@ span.woocommerce-input-wrapper {
 	top: 0;
 	position: absolute;
 	left: 0;
-	color: #0C87CC;
+	color: #253b80;
 }
 
 p.stars a {
@@ -401,13 +409,13 @@ p.stars a:hover ~ a::before {
 
 p.stars:hover a::before {
 	content: "\53";
-	color: #0C87CC;
+	color: #253b80;
 	opacity: 1;
 }
 
 p.stars.selected a.active::before {
 	content: "\53";
-	color: #0C87CC;
+	color: #253b80;
 	opacity: 1;
 }
 
@@ -419,7 +427,7 @@ p.stars.selected a.active ~ a::before {
 
 p.stars.selected a:not(.active)::before {
 	content: "\53";
-	color: #0C87CC;
+	color: #253b80;
 	opacity: 1;
 }
 
@@ -569,7 +577,7 @@ p.no-comments {
 	height: 1em;
 	cursor: ew-resize;
 	outline: none;
-	background: #0C87CC;
+	background: #253b80;
 	box-sizing: border-box;
 	margin-top: -0.25em;
 	opacity: 1;
@@ -588,7 +596,7 @@ p.no-comments {
 	z-index: 1;
 	display: block;
 	border: 0;
-	background: #0C87CC;
+	background: #253b80;
 }
 
 .widget_price_filter .price_slider_wrapper .ui-widget-content {

@@ -14,7 +14,6 @@ a, a:visited,
 .wp-block-quote{
     border-color: <?php echo $color_1; ?>;
 }
-.top-bar ul li:nth-child(2) a,
 .has-codoswp-color-2-background-color,
 button,
 input[type="button"],
@@ -27,9 +26,6 @@ a:hover, a:focus, a:active,
 .site-title a:visited,
 .has-codoswp-color-2-color{
     color: <?php echo $color_2; ?>;
-}
-.navbar-nav>.active>a>span{
-    border-bottom-color: <?php echo $color_2; ?>;
 }
 button,
 input[type="button"],
@@ -89,7 +85,7 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea, select, .widget-area .widget ul li {
-    border-color: <?php echo $color_3; ?>;
+    border-color: <?php echo $color_4; ?>;
 }
 .top-bar,
 .top-bar .navbar-nav li a,
@@ -99,14 +95,18 @@ textarea, select, .widget-area .widget ul li {
 button,
 input[type="button"],
 input[type="reset"],
-input[type="submit"], pre, mark, ins{
+input[type="submit"], pre, mark, ins,
+a:not([href]):not([tabindex]), a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover{
     color: <?php echo $color_4; ?>;
 }
 body,
 .site-header,
-.site-footer,
 .has-codoswp-color-4-background-color{
     background-color: <?php echo $color_4; ?>;
+}
+
+.navbar-nav>.active>a>span{
+    border-bottom-color: <?php echo $color_5; ?>;
 }	
 <?php
 

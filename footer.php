@@ -34,7 +34,7 @@
 				<div class="col-sm-12 col-md-8">
 					<p class="text-right">
 						<?php
-						printf( esc_html__( '© Copyright %s. All rights reserved.', CODOSWP ), date("Y") );
+						printf( esc_html__( '&copy; Copyright %s. All rights reserved.', CODOSWP ), date("Y") );
 						?>
 					</p>
 				</div>

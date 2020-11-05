@@ -191,10 +191,11 @@ add_action( 'after_setup_theme', 'codoswp_register_navwalker' );
  * Register custom color pallets
  */
 
-$color_1 = get_theme_mod( 'codoswp-color-1', '#0C87CC');
-$color_2 = get_theme_mod( 'codoswp-color-2', '#00C0D4');
+$color_1 = get_theme_mod( 'codoswp-color-1', '#253b80');
+$color_2 = get_theme_mod( 'codoswp-color-2', '#179bd7');
 $color_3 = get_theme_mod( 'codoswp-color-3', '#545454');
-$color_4 = get_theme_mod( 'codoswp-color-4', '#FFFFFF');
+$color_4 = get_theme_mod( 'codoswp-color-4', '#ffffff');
+$color_5 = get_theme_mod( 'codoswp-color-5', '#ff6000');
 
 add_theme_support( 'editor-color-palette', array(
 	array(
@@ -213,9 +214,14 @@ add_theme_support( 'editor-color-palette', array(
 		'color' => $color_3,
 	),
 	array(
-		'name'	=> __( 'Color 4', CODOSWP ),
-		'slug'	=> 'codoswp-color-4',
-		'color'	=> $color_4,
+		'name'  => __( 'Color 4', CODOSWP ),
+		'slug'  => 'codoswp-color-4',
+		'color' => $color_4,
+	),
+	array(
+		'name'  => __( 'Color 5', CODOSWP ),
+		'slug'  => 'codoswp-color-5',
+		'color' => $color_5,
 	),
 ) );
 
