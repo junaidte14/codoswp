@@ -2,7 +2,7 @@
 //css styles
 ?>
 .top-bar,
-.page article header,
+.page-title,
 .has-codoswp-color-1-background-color{
     background-color: <?php echo $color_1; ?>;
 }
