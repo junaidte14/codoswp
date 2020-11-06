@@ -2,7 +2,7 @@
 //css styles
 ?>
 .top-bar,
-.page-title,
+.page-header,
 .has-codoswp-color-1-background-color{
     background-color: <?php echo $color_1; ?>;
 }
@@ -90,7 +90,7 @@ textarea, select, .widget-area .widget ul li {
 .top-bar,
 .top-bar .navbar-nav li a,
 .top-bar .navbar-nav li a:hover,
-.page article header h1,
+.page-header h1,
 .has-codoswp-color-4-color,
 button,
 input[type="button"],

@@ -13,10 +13,10 @@ get_header();
 	<div class="row">
 		<main id="primary" class="site-main col-sm-12 col-md-12">
 			<section class="error-404 not-found">
-				<header class="page-header">
+				<header class="page-header alignwide">
 					<div class="codoswp-container">
 						<div class="page-title">
-							<?php esc_html_e( 'Oops! That page can&rsquo;t be found.', CODOSWP ); ?>
+							<h1><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', CODOSWP ); ?></h1>
 						</div>
 					</div>
 				</header><!-- .page-header -->

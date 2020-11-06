@@ -10,7 +10,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header alignwide">
+	<header class="page-header alignwide">
 		<div class="codoswp-container">
 			<div class="page-title">
 				<?php

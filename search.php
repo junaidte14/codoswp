@@ -11,18 +11,21 @@ get_header();
 ?>
 <div class="codoswp-container">
 	<div class="row">
-		<main id="primary" class="site-main">
+		<main id="primary" class="site-main col-sm-12 col-md-12">
 
 			<?php if ( have_posts() ) : ?>
 
-				<header class="page-header">
-					<h1 class="page-title">
-						<?php
-						/* translators: %s: search query. */
-						printf( esc_html__( 'Search Results for: %s', 'codoswp' ), '<span>' . get_search_query() . '</span>' );
-						?>
-					</h1>
-				</header><!-- .page-header -->
+				<header class="page-header alignwide">
+					<div class="codoswp-container">
+						<div class="page-title">
+							<h1>
+								<?php 
+									printf( esc_html__( 'Search Results for: %s', 'codoswp' ), '<span>' . get_search_query() . '</span>' ); 
+								?>
+							</h1>
+						</div>
+					</div>
+				</header>
 
 				<?php
 				/* Start the Loop */
