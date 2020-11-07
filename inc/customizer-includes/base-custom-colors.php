@@ -85,7 +85,7 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea, select, .widget-area .widget ul li {
-    border-color: <?php echo $color_4; ?>;
+    border-color: <?php echo $color_3; ?>;
 }
 .top-bar,
 .top-bar .navbar-nav li a,
